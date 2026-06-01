@@ -18,7 +18,38 @@
     "dotenv": "^17.3.1",
     "express": "^5.2.1",
     "jsonwebtoken": "^9.0.3",
-    "mongoose": "^9.3.2",
+    "mongoose": "^9.3.2",#SERVER PORT
+PORT=8000
+
+#DATABASE: MONGODB
+MONGODB_USERNAME=watrstack_db_user
+MONGODB_PASSWORD=Jq5zJyGcMRxEO4nA
+MONGO_URI=mongodb+srv://watrstack_db_user:Jq5zJyGcMRxEO4nA@cluster0.wgqmvlz.mongodb.net
+
+#FRONTEND URL
+CLIENT_URL=https://retailkart.netlify.app/
+# CLIENT_URL=http://localhost:5173 || https://retailkart.netlify.app/
+
+#VerifyEmail
+MAIL_USER=watrstack@gmail.com
+MAIL_PASS=vwkyjnatewfglaml
+
+#jwt secret
+ACCESS_TOKEN_SECRET=abczyx
+REFRESH_TOKEN_SECRET=xyzabc
+SECRET_KEY=adjsakdjk
+
+#NODEMAILER
+APP_NAME=RETAILKART
+
+#FOR CLOUDINARY
+CLOUD_NAME=dad0jlyjb
+API_KEY=622686936684896
+API_SECRET=EjUxu2PoDERpJImvviLM3lwXQAg
+
+#RAZORPAY
+RAZORPAY_KEY_ID=rzp_test_SiTW35iXRxCZe9
+RAZORPAY_KEY_SECRET=Tr6ryM6IoPoH5b8vqG3uNppy
     "multer": "^2.1.1",
     "nodemailer": "^8.0.4",
     "nodemon": "^3.1.14",
