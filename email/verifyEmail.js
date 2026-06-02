@@ -103,12 +103,15 @@
 // };
 
 //New code for solving the ipv6 error=> switch to ipv4
+import dns from "dns";
 import nodemailer from "nodemailer";
+
+dns.setDefaultResultOrder("ipv4first");
 
 export const verifyEmail = async (token, email) => {
   try {
     const transporter = nodemailer.createTransport({
-      host: "smtp.gmail.com",
+      host: "gmail",
       // host: "74.125.69.109",
       port: 587,
       secure: false, // true only for port 465
