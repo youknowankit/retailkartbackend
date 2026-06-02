@@ -111,7 +111,7 @@ dns.setDefaultResultOrder("ipv4first");
 export const verifyEmail = async (token, email) => {
   try {
     const transporter = nodemailer.createTransport({
-      host: "gmail",
+      host: "smtp.gmail.com",
       // host: "74.125.69.109",
       port: 587,
       secure: false, // true only for port 465
