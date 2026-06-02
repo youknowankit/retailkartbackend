@@ -108,14 +108,18 @@ import nodemailer from "nodemailer";
 export const verifyEmail = async (token, email) => {
   try {
     const transporter = nodemailer.createTransport({
-      host: "smtp.gmail.com",
+      // host: "smtp.gmail.com",
+      host: "74.125.69.109",
       port: 587,
       secure: false, // true only for port 465
       auth: {
         user: process.env.MAIL_USER,
         pass: process.env.MAIL_PASS,
       },
-      family: 4, // Force IPv4
+      // family: 4, // Force IPv4
+      tls: {
+        rejectUnauthorized: false,
+      },
     });
 
     // Verify SMTP connection
