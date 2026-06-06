@@ -40,13 +40,13 @@ export const registerService = async ({
     expiresIn: "10m",
   });
 
-  //Send the verification Email
-  await verifyEmail(token, newUser.email);
-
   //We pass token to the new user
   newUser.token = token;
 
   await newUser.save();
+
+  //Send the verification Email
+  await verifyEmail(token, newUser.email);
 
   /*Removing password before sending response */
   newUser.password = undefined;
